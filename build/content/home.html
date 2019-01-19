@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type='text/css'>
+  /*
+  # The Mad CSScientist's Basic CSS Stylesheet
+  written by Tommy Hodgins: https://gist.github.com/tomhodgins/e330ec1826d1cde2b8b0
+  ## Usage
+  Add this stylesheet to barebones HTML documents to instantly add some sensible defaults for text or documentation
+      <link href=http://staticresource.com/basic.css rel=stylesheet>
+  This stylesheet contains multiple themes. To apply a theme add the attribute `data-theme` with the value `book`, `dark`, or `code` to the HTML tag.
+      <html data-theme=dark>
+  */
+  
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-kerning: auto;
+    outline: none;
+  }
+  ::-moz-selection {
+    color: #fff;
+    text-shadow: #007931 1px 1px 1px;
+    background-color: #26ba62 !important;
+  }
+  ::-webkit-selection {
+    color: #fff;
+    text-shadow: #007931 1px 1px 1px;
+    background-color: #26ba62 !important;
+  }
+  ::selection {
+    color: #fff;
+    text-shadow: #007931 1px 1px 1px;
+    background-color: #26ba62 !important;
+  }
+  ::-webkit-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  :-moz-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  ::-moz-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  :-ms-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  ::-ms-input-placeholder {
+    color: rgba(0,0,0,.5);
+  }
+  :placeholder-shown {
+    color: rgba(0,0,0,.5);
+  }
+  html {
+    color: #333;
+    font-size: 10pt;
+    line-height: 1.4;
+    font-weight: 400;
+    min-height: 100%;
+    -webkit-text-size-adjust: 100%;
+    background: white;
+    font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', 'Fira Sans', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  }
+  body {
+    margin: 0 auto;
+    max-width: 850px;
+    min-height: 100%;
+    padding: 2em;
+  }
+  q:before {content: '\201c'}
+  q:after  {content: '\201d'}
+  q q:before {content: '\2018'}
+  q q:after  {content: '\2019'}
+  h1!important, h2!important, h3!important, h4!important, h5!important, h6!important {
+    color: #555;
+    margin: .5em 0;
+    font-weight: 600;
+    letter-spacing: -.03em;
+    line-height: 1.2;
+    font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+    word-break: break-word;
+  }
+  h1 {
+    color: #333;
+    text-align: center;
+    font-size: 480%;
+    font-weight: 700;
+    line-height: 1;
+    text-shadow: white 0 -1px 0;
+  }
+  h1 + h2 {
+    color: #777;
+    margin-top: -1em;
+    margin-bottom: 1.5em;
+    font-size: 200%;
+    line-height: 1.4;
+    font-weight: 300;
+    text-align: center;
+  }
+  h2 {
+    font-size: 300%;
+  }
+  h3 {
+    font-size: 220%;
+  }
+  h4 {
+    font-size: 180%;
+  }
+  h5 {
+    font-size: 140%;
+  }
+  h6 {
+    font-size: 120%;
+  }
+  a {
+    color: slateblue;
+    text-decoration: none;
+    outline: none !important;
+  }
+  a:hover,
+  a:focus {
+    color: darkslateblue;
+  }
+  hr {
+    border: none;
+    height: 1px;
+    background: #ccc;
+  }
+  *:not(pre) > code {
+    color: #333;
+    background: #def;
+    display: inline-block;
+    line-height: 1.3;
+    padding: 0 .3em;
+    margin: 0 .15em;
+    border-radius: 3px;
+    box-shadow: rgba(0,0,0,.1) 0 1px 0;
+    font-family: 'Source Code Pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+    max-width: 100%;
+    word-break: break-word;
+  }
+  *:not(pre) > code a {
+    color: indigo;
+  }
+  pre {
+    color: #839496;
+    display: block;
+    width: 100%;
+    padding: 1em;
+    margin: 1em 0 2em 0;
+    border-radius: 3px;
+    font-size: 12pt;
+    font-family: 'Source Code Pro', Consolas, 'Andale Mono WT', 'Andale Mono', 'Lucida Console', 'Lucida Sans Typewriter', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Liberation Mono', 'Nimbus Mono L', Monaco, 'Courier New', Courier, monospace;
+    word-break: break-word;
+    white-space: pre-wrap;
+    font-kerning: auto;
+    background: #002b36;
+    border: 1px solid rgba(0,0,0,.05);
+    box-shadow: inset rgba(0,0,0,.075) 0 -3px 10px,
+                inset rgba(255,255,255,.15) 0 1px 0,
+                rgba(0,0,0,.3) 0 1px .5px,
+                rgba(0,0,0,.15) 0 3px 5px;
+  }
+  li {
+    font-size: 12pt;
+    padding: .25em 0;
+  }
+  p {
+    margin: 0;
+    font-weight: 400;
+    font-size: 12pt;
+  }
+  * + p {
+    margin-top: .5em;
+  }
+  input:not([type=checkbox]):not([type=radio]),
+  textarea {
+    width: 100%;
+    font-size: 12pt;
+    margin-bottom: 1em;
+    padding: 10px 8px;
+  }
+  blockquote {
+    color: #777;
+    margin: 1em auto 0 auto;
+    padding: 1em 2em;
+    position: relative;
+    font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  }
+  blockquote:before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 100%;
+    background: currentColor;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .5;
+  }
+  blockquote p {
+    color: #333;
+    font-size: 250%;
+    font-weight: 500;
+    font-style: italic;
+  }
+  blockquote footer {
+    margin-top: .5em;
+    padding: 0;
+    color: currentColor;
+    font-size: 125%;
+    text-align: left;
+  }
+  blockquote footer:before {
+    content: '— ';
+  }
+  footer {
+    color: #777;
+    font-size: 11pt;
+    text-align: center;
+    padding: 2em .5em;
+  }
+  a,
+  input,
+  textarea,
+  button,
+  label,
+  iframe,
+  audio,
+  video {
+    touch-action: manipulation;
+  }
+  [class*="float-"] {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    margin: 0 auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+  }
+  [data-tooltip][class*="float-"]{
+    pointer-events: all;
+  }
+  @media (min-width: 500px) {
+    .float-left {
+      float: left;
+      margin: 0 .5em .5em 0;
+      max-width: 50%;
+    }
+    .float-right {
+      float: right;
+      margin: 0 0 .5em .5em;
+      max-width: 50%;
+    }
+  }
+  @media (max-width: 500px) {
+    html {
+      font-size: 7.5pt;
+    }
+  }
+  
+  
+  /* Preston Theme */
+  [data-theme=preston] *:not(pre,code,[data-button]) {
+    font-family: 'Lora', 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  }
+  [data-theme=preston],
+  [data-theme=preston] body {
+    background: white;
+  }
+  [data-theme=preston] a {
+    color: mediumblue;
+  }
+  [data-theme=preston] a:hover,
+  [data-theme=preston] a:focus {
+    color: blue;
+  }
+  [data-theme=preston] h1,
+  [data-theme=preston] h2,
+  [data-theme=preston] h3,
+  [data-theme=preston] h4,
+  [data-theme=preston] h5,
+  [data-theme=preston] h6 {
+    font-family: 'Raleway', 'Open Sans', 'Source Sans Pro', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif !important;
+    font-weight: 900;
+    color: #111;
+    text-shadow: none;
+  }
+  [data-theme=preston] main > p,
+  [data-theme=preston] main > ul li,
+  [data-theme=preston] main > ol li {
+    font-size: 12pt;
+    line-height: 1.7;
+    font-family: 'Lora', 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+  }
+  [data-theme=preston] main > p + p {
+    margin-top: 1em;
+  }
+  [data-theme=preston] blockquote p,
+  [data-theme=preston] blockquote q {
+    font-family: 'Lora', 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+    font-weight: 300;
+  }
+  [data-theme=preston] blockquote cite,
+  [data-theme=preston] blockquote footer {
+    font-family: 'Lora', 'PT Serif', Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
+    font-weight: 700;
+  }
+  [data-theme=preston] form select,
+  [data-theme=preston] form .split-input > input,
+  [data-theme=preston] form .split-input > select,
+  [data-theme=preston] form [type="text"],
+  [data-theme=preston] form [type="tel"],
+  [data-theme=preston] form [type^="cc-"],
+  [data-theme=preston] form [type="email"],
+  [data-theme=preston] form textarea {
+    border: 1px solid rgba(0,0,0,.15);
+    box-shadow: none;
+  }
+  [data-theme=preston] form select:focus,
+  [data-theme=preston] form .split-input > input:focus,
+  [data-theme=preston] form .split-input > select:focus,
+  [data-theme=preston] form [type="text"]:focus,
+  [data-theme=preston] form [type="tel"]:focus,
+  [data-theme=preston] form [type^="cc-"]:focus,
+  [data-theme=preston] form [type="email"]:focus,
+  [data-theme=preston] form textarea:focus {
+    border-color: orange;
+    box-shadow: #fc0 0 0 3px;
+  }
+  @media (min-width: 600px) {
+    [data-theme=preston] main > p,
+    [data-theme=preston] main > ul li,
+    [data-theme=preston] main > ol li {
+      font-size: 14pt;
+    }
+  }
+  [data-modal] article {
+    padding: 1em;
+  }
+  
+  
+  </style>
+</head>
+<body data-theme="preston">
+<main>
+<h4><a href='../index.html'>Echo Lake Research</a></h4>
+<hr>
+<h1 id="echo-lake-research">Echo Lake Research</h1>
+<h2 id="bite-sized-adventures-to-a-better-life">Bite-sized adventures to a better life</h2>
+<p>Our mission is to help people in our local community find better food, stronger community, and more resilient living by connecting together, and by connecting to this place we call home.</p>
+<p>You can read a bit more about our approach on our <a href="about.html">About page</a>.</p>
+<h2 id="take-a-class">Take a class</h2>
+<p>If you are in or around the neighborhood of Echo Lake &amp; Maltby, you can take some of the in person classes we teach. Each class is designed to give you immediately practical takeaway skills that will make your life better, while saving time and money.</p>
+<p>Email jason@echolakeresearch.org to get notified about upcoming classes, and free online live videos and webinars.</p>
+</main>
+</body>
+</html>

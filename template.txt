@@ -38,11 +38,11 @@ $endfor$
 <div class='top-menu' style='float: right'>
     <p>
       <a href='/gardening'>Gardening</a>
-      &bull;
+      &nbsp;&bull;&nbsp;
       <a href='/Health'>Health</a>
-      &bull;
+      &nbsp;&bull;&nbsp;
       <a href='/cooking'>Cooking</a>
-      &bull;
+      &nbsp;&bull;&nbsp;
       <a href='/community'>Community</a>
     </p>
 </div>

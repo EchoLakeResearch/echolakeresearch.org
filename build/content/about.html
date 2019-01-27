@@ -64,19 +64,23 @@
   }
   html {
     color: #333;
-    font-size: 10pt;
+    font-size: 14pt;
     line-height: 1.4;
     font-weight: 400;
     min-height: 100%;
     -webkit-text-size-adjust: 100%;
-    background: white;
+    background-image: url(./ricepaper-texture.png);
+    background-image: url(/ricepaper-texture.png);
+    background-attachment: fixed;
     font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', 'Fira Sans', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
   }
   body {
     margin: 0 auto;
-    max-width: 850px;
+    max-width: 910px;
     min-height: 100%;
-    padding: 2em;
+    padding: 5em;
+    box-shadow: #d2d2d2 0px 0px 48px;
+    margin-top: 24px;
   }
   q:before {content: '\201c'}
   q:after  {content: '\201d'}
@@ -91,46 +95,69 @@
     font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
     word-break: break-word;
   }
+  .mist {
+    color: #7A9D96!important;
+  }
+  .green {
+    color: #5A6029!important;
+  }
+  .honey {
+    color: #DCAE1D!important;
+  }
+  .sky {
+    color: #CAE4DB!important;
+  }
+  .blue {
+    color: #00303F!important;
+  }
+  .top-menu {
+    margin-bottom: 12px;
+  }
+  .top-menu a {
+    font-size: 1.2em;
+    text-decoration: none;
+    font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+  }
+  
   h1 {
     color: #333;
     text-align: center;
-    font-size: 480%;
+    margin-bottom: 1.2em;
+    font-size: 200%;
     font-weight: 700;
     line-height: 1;
     text-shadow: white 0 -1px 0;
   }
   h1 + h2 {
-    color: #777;
+    color: #777!important;
     margin-top: -1em;
-    margin-bottom: 1.5em;
-    font-size: 200%;
+    font-size: 150%;
     line-height: 1.4;
     font-weight: 300;
     text-align: center;
   }
   h2 {
-    font-size: 300%;
+    font-size: 150%;
   }
   h3 {
-    font-size: 220%;
+    font-size: 130%;
   }
   h4 {
-    font-size: 180%;
+    font-size: 115%;
   }
   h5 {
-    font-size: 140%;
+    font-size: 100%;
   }
   h6 {
-    font-size: 120%;
+    font-size: 100%;
   }
   a {
-    color: slateblue;
-    text-decoration: none;
+    color: inherit;
     outline: none !important;
   }
   a:hover,
   a:focus {
-    color: darkslateblue;
+    color: #DCAE1D;
   }
   hr {
     border: none;
@@ -231,6 +258,13 @@
     text-align: center;
     padding: 2em .5em;
   }
+  table td {
+    width: 45%;
+    vertical-align: top;
+  }
+  table td:nth-child(2) {
+    width: 10%;
+  }
   a,
   input,
   textarea,
@@ -283,13 +317,6 @@
   [data-theme=preston],
   [data-theme=preston] body {
     background: white;
-  }
-  [data-theme=preston] a {
-    color: mediumblue;
-  }
-  [data-theme=preston] a:hover,
-  [data-theme=preston] a:focus {
-    color: blue;
   }
   [data-theme=preston] h1,
   [data-theme=preston] h2,
@@ -360,10 +387,28 @@
 </head>
 <body data-theme="preston">
 <main>
-<h4><a href='../index.html'>Echo Lake Research</a></h4>
-<hr>
+<div class='top-menu' style='float: left'>
+  <p><a href='../index.html'>Echo Lake Research</a></p>
+</div>
+<div class='top-menu' style='float: right'>
+    <p>
+      <a href='/gardening'>Gardening</a>
+      &bull;
+      <a href='/Health'>Health</a>
+      &bull;
+      <a href='/cooking'>Cooking</a>
+      &bull;
+      <a href='/community'>Community</a>
+    </p>
+</div>
+<hr style='clear: both'>
 <h1 id="about">About</h1>
 <p>Our mission is to help people in our local community find better food, stronger community, and more resilient living by connecting together, and by connecting to this place we call home.</p>
+<h2 id="our-story">Our Story</h2>
+<p>Echo Lake Research started in 2017 as a small market garden, and quickly transformed into a broader community development effort. It is a project mostly of Jason Padvorac, with support from Meggan Padvorac and our two daughters. We are located near Maltby, Washington, and are working to strengthen and localize the community in our neighborhood.</p>
+<p>Jason grew up with an organic vegetable garden in the backyard, and always loved exploring in the wilderness. Wanting to use his fascination with living systems to serve humanity, he earned a BS in Biomedical Engineering from the University of Washington. He gradually realized that the most accessible wins for human health and happiness were not in advanced medical research, but in simple changes of life practice. Time spent with indigenous Karen people in Thailand was a transformative experience that helped him see how much richer community should be than we are used to here.</p>
+<p>While paying the bills as a web developer, he has used his scientific and engineering skills in searching out the most practical, impactful ways that we can retrofit our modern lives, right here and now. A major source of inspiration and useful tools have come from the worlds of Natural Farming, Permaculture Design, and other regenerative frameworks.</p>
+<p>We don’t need to wait for politicians to change national policies, we don’t need to wait for corporations to develop products, and we don’t need to wait for universities to perform the research we need. There are practical steps driven by modern science and traditional knowledge that let us build healthier, happier, fuller lives for our families right now. There are simple questions we can seek out and answer as a community, right now. Let’s get to it!</p>
 <h2 id="guiding-principles">Guiding Principles</h2>
 <ol style="list-style-type: decimal">
 <li>Community first, and whenever possible involve food and health. We need each other, and the most impactful changes will stem from us living that out. Some of the most impactful changes we can support each other in making relate to how we eat and how we stay healthy.</li>

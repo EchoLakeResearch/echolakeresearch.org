@@ -32,8 +32,21 @@ $endfor$
 </head>
 <body data-theme="preston">
 <main>
-<h4><a href='../index.html'>Echo Lake Research</a></h4>
-<hr>
+<div class='top-menu' style='float: left'>
+  <p><a href='../index.html'>Echo Lake Research</a></p>
+</div>
+<div class='top-menu' style='float: right'>
+    <p>
+      <a href='/gardening'>Gardening</a>
+      &bull;
+      <a href='/Health'>Health</a>
+      &bull;
+      <a href='/cooking'>Cooking</a>
+      &bull;
+      <a href='/community'>Community</a>
+    </p>
+</div>
+<hr style='clear: both'>
 $for(include-before)$
 $include-before$
 $endfor$

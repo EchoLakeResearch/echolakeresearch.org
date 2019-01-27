@@ -56,19 +56,23 @@ This stylesheet contains multiple themes. To apply a theme add the attribute `da
 }
 html {
   color: #333;
-  font-size: 10pt;
+  font-size: 14pt;
   line-height: 1.4;
   font-weight: 400;
   min-height: 100%;
   -webkit-text-size-adjust: 100%;
-  background: white;
+  background-image: url(./ricepaper-texture.png);
+  background-image: url(/ricepaper-texture.png);
+  background-attachment: fixed;
   font-family: 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', 'Fira Sans', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
 }
 body {
   margin: 0 auto;
-  max-width: 850px;
+  max-width: 910px;
   min-height: 100%;
-  padding: 2em;
+  padding: 5em;
+  box-shadow: #d2d2d2 0px 0px 48px;
+  margin-top: 24px;
 }
 q:before {content: '\201c'}
 q:after  {content: '\201d'}
@@ -83,46 +87,69 @@ h1!important, h2!important, h3!important, h4!important, h5!important, h6!importa
   font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
   word-break: break-word;
 }
+.mist {
+  color: #7A9D96!important;
+}
+.green {
+  color: #5A6029!important;
+}
+.honey {
+  color: #DCAE1D!important;
+}
+.sky {
+  color: #CAE4DB!important;
+}
+.blue {
+  color: #00303F!important;
+}
+.top-menu {
+  margin-bottom: 12px;
+}
+.top-menu a {
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: 'Fira Sans', 'Source Sans Pro', 'Open Sans', Roboto, 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Pro', 'Segoe UI', Myriad, Helvetica, 'Lucida Grande', 'DejaVu Sans Condensed', 'Liberation Sans', 'Nimbus Sans L', Tahoma, Geneva, Arial, sans-serif;
+}
+
 h1 {
   color: #333;
   text-align: center;
-  font-size: 480%;
+  margin-bottom: 1.2em;
+  font-size: 200%;
   font-weight: 700;
   line-height: 1;
   text-shadow: white 0 -1px 0;
 }
 h1 + h2 {
-  color: #777;
+  color: #777!important;
   margin-top: -1em;
-  margin-bottom: 1.5em;
-  font-size: 200%;
+  font-size: 150%;
   line-height: 1.4;
   font-weight: 300;
   text-align: center;
 }
 h2 {
-  font-size: 300%;
+  font-size: 150%;
 }
 h3 {
-  font-size: 220%;
+  font-size: 130%;
 }
 h4 {
-  font-size: 180%;
+  font-size: 115%;
 }
 h5 {
-  font-size: 140%;
+  font-size: 100%;
 }
 h6 {
-  font-size: 120%;
+  font-size: 100%;
 }
 a {
-  color: slateblue;
-  text-decoration: none;
+  color: inherit;
   outline: none !important;
 }
 a:hover,
 a:focus {
-  color: darkslateblue;
+  color: #DCAE1D;
 }
 hr {
   border: none;
@@ -223,6 +250,13 @@ footer {
   text-align: center;
   padding: 2em .5em;
 }
+table td {
+  width: 45%;
+  vertical-align: top;
+}
+table td:nth-child(2) {
+  width: 10%;
+}
 a,
 input,
 textarea,
@@ -275,13 +309,6 @@ video {
 [data-theme=preston],
 [data-theme=preston] body {
   background: white;
-}
-[data-theme=preston] a {
-  color: mediumblue;
-}
-[data-theme=preston] a:hover,
-[data-theme=preston] a:focus {
-  color: blue;
 }
 [data-theme=preston] h1,
 [data-theme=preston] h2,
